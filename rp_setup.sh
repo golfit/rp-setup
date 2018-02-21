@@ -63,6 +63,8 @@ if [[ "$USER_ANS" != *[nN]* ]]; then #Note: white space matters between double b
     sudo apt-get update
     sudo apt-get install xinetd
     sudo apt-get install mdsplus # Installs all the MDSplus packages
+    sudo apt-get install xorg #Need to install XWindows
+    sudo apt-get install twm
 
     # Copy C-Mod environment variable setup scripts
     scp $USERNM@cmodws100.psfc.mit.edu:/usr/local/mdsplus/local/ /usr/local/mdsplus
