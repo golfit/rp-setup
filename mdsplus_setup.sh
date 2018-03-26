@@ -21,7 +21,7 @@ sudo apt-get install xorg #Need to install XWindows
 sudo apt-get install twm
 
 # Copy C-Mod environment variable setup scripts
-rsync -avz $USERNM@cmodws100.psfc.mit.edu:/usr/local/mdsplus/local /usr/local/mdsplus
+sudo rsync -avz $USERNM@cmodws100.psfc.mit.edu:/usr/local/mdsplus/local /usr/local/mdsplus
 
 # Append C-Mod data servers to /etc/hosts so that hostnames are resolved to correct IP addresses
 sudo echo "# Added $(date) from rp_setup.sh" >> /etc/hosts
@@ -31,3 +31,8 @@ sudo echo "198.125.180.202 alcdata" >> /etc/hosts
 sudo echo "198.125.180.202 alcdata-saved" >> /etc/hosts
 sudo echo "198.125.180.202 alcdata-models" >> /etc/hosts
 sudo echo "198.125.177.171 alcdata-archives" >> /etc/hosts
+
+#Add mdsplus-local folder
+sudo mkdir /usr/local/cmod
+sudo rsync -avz golfit@cmodws107:/usr/local/cmod/mdsplus-local /usr/local/cmod
+sudo rsync -avz golfit@cmodws107:/usr/local/cmod/sbin /usr/local/cmod
