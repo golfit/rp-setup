@@ -56,7 +56,7 @@ if [[ "$USER_ANS" != *[nN]* ]]; then #Note: white space matters between double b
     echo "deb http://www.mdsplus.org/dist/raspberrypi/repo MDSplus alpha" > /etc/apt/sources.list.d/mdsplus.list
 
     # Install MDSplus signing key
-    wget http://www.mdsplus.org/dist/mdsplus.gpg.key
+    sudo wget http://www.mdsplus.org/dist/mdsplus.gpg.key
     sudo apt-key add mdsplus.gpg.key
 
     # Update repository cache, install xinetd, and install MDSplus
