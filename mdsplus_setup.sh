@@ -25,7 +25,7 @@ sudo apt-get install twm
 sudo rsync -avz $USERNM@cmodws100.psfc.mit.edu:/usr/local/mdsplus/local /usr/local/mdsplus
 
 # Append C-Mod data servers to /etc/hosts so that hostnames are resolved to correct IP addresses
-sudo echo "# Added $(date) from rp_setup.sh" >> /etc/hosts
+sudo echo "# Added $(date) from mdsplus_setup.sh" >> /etc/hosts
 sudo echo "198.125.180.202 alcdata-test" >> /etc/hosts
 sudo echo "198.125.180.202 alcdata-new" >> /etc/hosts
 sudo echo "198.125.180.202 alcdata" >> /etc/hosts
