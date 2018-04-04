@@ -37,3 +37,4 @@ sudo echo "198.125.177.171 alcdata-archives" >> /etc/hosts
 sudo mkdir /usr/local/cmod
 sudo rsync -avz $USERNM@cmodws107:/usr/local/cmod/mdsplus-local /usr/local/cmod
 sudo rsync -avz $USERNM@cmodws107:/usr/local/cmod/sbin /usr/local/cmod
+sudo rsync -avz $USERNM@cmodws107:/usr/local/mdsplus/local /usr/local/mdsplus
