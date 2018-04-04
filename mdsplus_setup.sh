@@ -33,8 +33,11 @@ sudo echo "198.125.180.202 alcdata-saved" >> /etc/hosts
 sudo echo "198.125.180.202 alcdata-models" >> /etc/hosts
 sudo echo "198.125.177.171 alcdata-archives" >> /etc/hosts
 
+#This is necessary to configure C-Mod environment variables
+sudo rsync -avz $USERNM@cmodws107:/usr/local/mdsplus/local /usr/local/mdsplus
+
 #Add mdsplus-local folder
 sudo mkdir /usr/local/cmod
 sudo rsync -avz $USERNM@cmodws107:/usr/local/cmod/mdsplus-local /usr/local/cmod
 sudo rsync -avz $USERNM@cmodws107:/usr/local/cmod/sbin /usr/local/cmod
-sudo rsync -avz $USERNM@cmodws107:/usr/local/mdsplus/local /usr/local/mdsplus
+
