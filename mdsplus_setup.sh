@@ -16,6 +16,7 @@ sudo apt-key add mdsplus.gpg.key
 # Update repository cache, install xinetd, and install MDSplus
 sudo apt-get update
 sudo apt-get install xinetd
+sudo apt-get install libmotif-dev # Installs libraries necessary for rendering objects in MDSplus applications like traverser, dwscope, etc.
 sudo apt-get install mdsplus # Installs all the MDSplus packages
 sudo apt-get install xorg #Need to install XWindows
 sudo apt-get install twm
